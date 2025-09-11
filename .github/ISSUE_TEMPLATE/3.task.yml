@@ -1,0 +1,29 @@
+name: Task
+description: Crea una tarea específica con detalles claros.
+title: 'Descripción clara de la tarea'
+labels: [task]
+type: Task
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: '**Descripción detallada de la tarea**'
+      description: '_Explicación breve de lo que se debe hacer._'
+      render: markdown
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: '**Pasos para Completar la Tarea**'
+      description: 'Lista de pasos que deben seguirse para completar la tarea.'
+      value: "- Paso 1: ...\n- Paso 2: ...\n- Paso 3: ..."
+      render: markdown
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: 'Notas Adicionales'
+      description: 'Información adicional relevante, enlaces o dependencias.'
+      render: markdown

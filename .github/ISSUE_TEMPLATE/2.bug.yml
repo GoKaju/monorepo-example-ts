@@ -1,0 +1,29 @@
+name: Bug Report
+description: Reporta un error reproducible con detalles claros.
+title: 'Descripción clara del error'
+labels: [bug]
+type: Bug
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: '**Descripción detallada del comportamiento actual**'
+      description: '_Describe qué está pasando actualmente, que **NO** debería pasar._'
+      render: markdown
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction_steps
+    attributes:
+      label: '**Pasos para Reproducir**'
+      description: 'Lista de pasos que deben seguirse para reproducir el error.'
+      value: "- Paso 1: ...\n- Paso 2: ...\n- Paso 3: ..."
+      render: markdown
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: 'Notas Adicionales'
+      description: 'Información adicional relevante, enlaces, Ambiente de prueba (sistema operativo, navegador, etc.). Capturas de pantalla o logs si es aplicable.'
+      render: markdown

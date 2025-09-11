@@ -1,0 +1,28 @@
+name: Documentation
+description: Crea o actualiza documentación con detalles claros.
+title: 'Descripción clara de la documentación a crear o actualizar'
+labels: [documentation]
+type: Task
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: '**Descripción de la documentación**'
+      description: '_Explicación breve de lo que se debe documentar o mejorar._'
+      render: markdown
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: '**Objetivo**'
+      description: '_¿Qué se espera lograr con esta documentación?_'
+      render: markdown
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: 'Notas Adicionales'
+      description: 'Información adicional relevante, enlaces o dependencias.'
+      render: markdown

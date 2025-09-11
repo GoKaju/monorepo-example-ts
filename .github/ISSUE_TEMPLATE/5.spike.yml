@@ -1,0 +1,44 @@
+name: Spike
+description: Explora una idea o solución sin un resultado definido, enfocándose en la investigación y experimentación.
+title: 'Descripción clara del spike a realizar'
+labels: [spike]
+type: Spike
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: '**Descripción del spike**'
+      description: '_Explicación breve del objetivo del Spike y qué se espera lograr._'
+      render: markdown
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: '**Resultados Esperados**'
+      description: '_¿Qué información o prototipo se espera obtener?_'
+      render: markdown
+    validations:
+      required: true
+
+  - type: dropdown
+    id: time-box
+    attributes:
+      options:
+        - '1/2 día'
+        - '1 día'
+        - '3 días'
+        - '1 semana'
+        - '2 semanas'
+      default: 1
+      label: 'TimeBox - Tiempo máximo Asignado'
+      description: '_¿Cuánto tiempo se asignará para este Spike?_'
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: 'Notas Adicionales'
+      description: 'Información adicional relevante, enlaces o dependencias.'
+      render: markdown

@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "target": "ES2022",
+    "module": "CommonJS",
+    "lib": ["ES2022", "DOM"],
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "composite": true,
+    "incremental": true
+  }
+}

@@ -1,0 +1,29 @@
+name: Feature Request
+description: Solicita una nueva funcionalidad siguiendo el formato COMO/QUIERO/PARA.
+title: 'Descripción clara de la nueva funcionalidad'
+labels: [enhancement]
+type: Feature
+body:
+  - type: textarea
+    id: user_story
+    attributes:
+      label: 'Historia de Usuario'
+      value: "**COMO** [tipo de usuario o actor]\n**QUIERO** [funcionalidad/acción]\n**PARA** [beneficio/objetivo]"
+      render: markdown
+    validations:
+      required: true
+  - type: textarea
+    id: acceptation_criteria
+    attributes:
+      label: 'Criterios de Aceptación'
+      description: 'Lista de criterios que deben cumplirse para considerar la funcionalidad completa( deben ser verificables y medibles).'
+      value: "- Debe ...[comportamiento especifico esperado].\n- Debe ...[otro comportamiento esperado].\n- Debe ...[otro comportamiento esperado]."
+      render: markdown
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: 'Notas Adicionales'
+      description: 'Información adicional relevante, enlaces, dependencias o bloqueos conocidos.'
+      render: markdown

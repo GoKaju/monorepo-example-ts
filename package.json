@@ -1,0 +1,46 @@
+{
+  "name": "payslips-generator",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "add-new": "./scripts/add-new.sh",
+    "test": "vitest",
+    "lint:all": "eslint . --ext .ts,.tsx,.js,.jsx,.vue --fix",
+    "format:all": "prettier --write .",
+    "coverage": "vitest  run --coverage",
+    "prepare": "husky"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.15.0",
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx,vue}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{test.ts,test.tsx}": "vitest"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.35.0",
+    "@types/node": "^24.3.1",
+    "@vitest/coverage-v8": "^3.2.4",
+    "aws-cdk-lib": "^2.214.0",
+    "constructs": "^10.4.2",
+    "esbuild": "^0.25.9",
+    "eslint": "^9.35.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "globals": "^16.4.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.6",
+    "prettier": "^3.6.2",
+    "supertest": "^7.1.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.43.0",
+    "vitest": "^3.2.4"
+  }
+}

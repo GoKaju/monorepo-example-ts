@@ -1,0 +1,22 @@
+{
+  "name": "infra",
+  "version": "1.0.0",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "cdk": {
+    "app": "npx ts-node bin/infra.ts"
+  },
+  "scripts": {
+    "build": "tsc",
+    "cdk": "cdk",
+    "synth": "cdk synth",
+    "deploy": "cdk deploy",
+    "diff": "cdk diff",
+    "destroy": "cdk destroy"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "^2.214.0",
+    "constructs": "^10.0.0"
+  }
+}
