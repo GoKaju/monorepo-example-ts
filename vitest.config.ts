@@ -9,7 +9,6 @@ export default defineConfig({
       reporter: ['lcov', 'text-summary'], // lcov es el formato compatible con SonarCloud
       reportsDirectory: './coverage',
       include: ['contexts/**/src/*', 'apps/*/src/*', 'libs/*/**'],
-      // exclude: ['**/index.ts'],
     },
   },
 })

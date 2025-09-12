@@ -1,0 +1,15 @@
+{
+  "button": {
+    "buttonText": "Buscar",
+    "buttonAriaLabel": "Buscar"
+  },
+  "modal": {
+    "noResultsText": "No se encontraron resultados",
+    "resetButtonTitle": "Restablecer",
+    "footer": {
+      "selectText": "Seleccionar",
+      "navigateText": "Navegar",
+      "closeText": "Cerrar"
+    }
+  }
+}

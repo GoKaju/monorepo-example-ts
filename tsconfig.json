@@ -1,4 +1,4 @@
 {
-  "files": [],
-  "references": [{ "path": "./libs/*" }]
+  "extends": "./tsconfig.base.json"
+  // "references": [{ "path": "./libs/*" }] // Uncomment if you have libs
 }

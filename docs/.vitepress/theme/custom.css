@@ -1,0 +1,25 @@
+/* 🎨 Colores personalizados para VitePress */
+
+:root {
+  /* Color primario */
+  --vp-c-brand-1: #2563eb; /* principal */
+  --vp-c-brand-2: #3b82f6; /* hover (blue-500) */
+  --vp-c-brand-3: #60a5fa; /* active (blue-400) */
+
+  /* Fondo y texto (modo claro) */
+  --vp-c-bg: #ffffff;
+  --vp-c-text-1: #111827; /* texto principal */
+  --vp-c-text-2: #374151; /* subtítulos */
+}
+
+.dark {
+  /* Fondo y texto (modo oscuro) */
+  --vp-c-bg: #0f172a; /* slate-900 */
+  --vp-c-text-1: #f3f4f6; /* texto claro */
+  --vp-c-text-2: #d1d5db; /* subtítulos */
+
+  /* Versión del primario en dark */
+  --vp-c-brand-1: #3b82f6; /* azul más brillante */
+  --vp-c-brand-2: #60a5fa;
+  --vp-c-brand-3: #93c5fd;
+}
