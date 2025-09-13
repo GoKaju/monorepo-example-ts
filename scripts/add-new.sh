@@ -43,17 +43,17 @@ EOF
 # tsconfig.json
 cat > "$DIR/tsconfig.json" <<EOF
 {
-    "extends": "../../tsconfig.base.json",
-    "compilerOptions": {
-        "outDir": "dist"
-    },
-    "include": ["src"]
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "dist"
+  },
+ "include": ["src"]
 }
 EOF
 
 # src/index.ts
 echo "// $TIPO $NOMBRE" > "$DIR/src/index.ts"
-echo "console.log('[$FOLDER/$NOMBRE] módulo creado');" >> "$DIR/src/index.ts"
+echo "console.log('[$FOLDER/$NOMBRE] módulo creado')" >> "$DIR/src/index.ts"
 
 
 echo "Estructura creada en $DIR"

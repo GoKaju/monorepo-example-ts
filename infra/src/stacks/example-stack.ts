@@ -5,8 +5,10 @@ import {
   HttpNoneAuthorizer,
 } from 'aws-cdk-lib/aws-apigatewayv2'
 import { HttpLambdaIntegration } from 'aws-cdk-lib/aws-apigatewayv2-integrations'
-import { Code, Function, Runtime } from 'aws-cdk-lib/aws-lambda'
+import { Runtime } from 'aws-cdk-lib/aws-lambda'
+import { NodejsFunction } from 'aws-cdk-lib/aws-lambda-nodejs'
 import { Construct } from 'constructs'
+import path from 'path'
 
 export interface ExampleStackProps extends cdk.StackProps {
   api: HttpApi
@@ -23,19 +25,14 @@ export class ExampleStack extends cdk.Stack {
       path: '/hello',
       authorizer: new HttpNoneAuthorizer(),
       integration: new HttpLambdaIntegration(
-        'TestIntegration',
-        new Function(this, 'HelloFn', {
+        'TestLambdaIntegration',
+        new NodejsFunction(this, 'HelloFn', {
           runtime: Runtime.NODEJS_22_X,
           handler: 'index.handler',
-          code: Code.fromInline(`
-        exports.handler = async (event) => {
-          return {
-            statusCode: 200,
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ message: "Hola desde Lambda 🚀", event }),
-          };
-        };
-      `),
+          entry: path.join(
+            __dirname,
+            '../../../apps/example-service/src/index.ts'
+          ),
         })
       ),
     })

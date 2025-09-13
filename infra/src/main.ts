@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-import 'source-map-support/register'
 import * as cdk from 'aws-cdk-lib'
-import { ExampleStack } from './stacks/example-stack'
-import { AuthStack } from './stacks/auth-stack'
+import 'source-map-support/register'
 import { ApiStack } from './stacks/api-stack'
+import { AuthStack } from './stacks/auth-stack'
+import { ExampleStack } from './stacks/example-stack'
 
 const app = new cdk.App()
 
@@ -17,7 +17,7 @@ const removalPolicy =
   env.envName === 'dev' ? cdk.RemovalPolicy.DESTROY : cdk.RemovalPolicy.RETAIN
 
 // Add common tags for cost traceability
-cdk.Tags.of(app).add('Project', 'PayslipsGenerator')
+cdk.Tags.of(app).add('Project', 'MonoRepoExample')
 cdk.Tags.of(app).add('Environment', env.envName)
 
 const authStack = new AuthStack(app, 'AuthStack', {
