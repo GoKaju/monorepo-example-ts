@@ -1,11 +1,10 @@
-# Payslips Generator
+# Monorepo Example
 
-Este proyecto es una plataforma para la generación y gestión de recibos de sueldo (payslips) de manera automatizada y eficiente.
+Este proyecto es un ejemplo de monorepo que contiene múltiples aplicaciones, contextos y librerías compartidas.
 
 ## Características principales
 
-- Generación automática de recibos de sueldo en distintos formatos.
-- Soporte para múltiples aplicaciones (frontend, backend, etc.) bajo la carpeta `apps/`.
+- Soporte para múltiples aplicaciones (frontend, services, etc.) bajo la carpeta `apps/`.
 - Arquitectura basada en bounded contexts bajo `contexts/` para una mejor organización del dominio.
 - Librerías y utilidades compartidas en `libs/`.
 - Configuración de infraestructura y despliegue en `infra/`.
@@ -34,7 +33,7 @@ Consulta el archivo `README.folders.md` para una descripción detallada de cada 
 
 1. Crea un branch desde `main`.
 2. Realiza tus cambios y agrega pruebas si es necesario.
-3. Abre un Pull Request.
+3. Abre un Pull Request describiendo tus cambios.
 
 ## Licencia
 
